@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .payment-form {
+            background-color: white;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 400px;
+        }
+        h1, h2 {
+            color: black;
+        }
+        label {
+            display: block;
+            margin-bottom: 10px;
+            color: black;
+        }
+        table{
+            width: 100%;
+        }
+        input[type="text"], input[type="email"], input[type="password"], select {
+            width: 90%;
+            padding: 8px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        input[type="checkbox"] {
+            margin-right: 10px;
+        }
+        button {
+            width: 100%;
+            color: black;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            cursor: pointer;
+            
+        }
+    </style>
+</head>
+<body>
+    <form class="payment-form">
+        <h1>Payment Form</h1>
+        <p>Required fields are followed by *.</p>
+        
+        <h2>Contact Information</h2>
+        <table>
+            <tr>
+                <td><label for="name">Name <abbr title="required">*</abbr></label></td>
+                <td><input type="text" id="name" name="name" required></td>
+            </tr>
+            <tr>
+                <td><label for="email">E-mail <abbr title="required">*</abbr></label></td>
+                <td><input type="email" id="email" name="email" required></td>
+            </tr>
+            <tr>
+                <td><label for="password">Password <abbr title="required">*</abbr></label></td>
+                <td><input type="password" id="password" name="password" required></td>
+            </tr>
+         </table>
+        <h2>Payment Information</h2>
+        <table>
+            <tr>
+                <td><label for="card-type">Card Type <abbr title="required">*</abbr></label></td>
+                <td><select id="card-type" name="card-type" required>
+                        <option value="visa">Visa</option>
+                        <option value="mastercard">Master Card</option>
+                        <option value="maestro">Maestro</option>
+                        <option value="dinersclub">Diners Club</option>
+                    </select></td>
+            </tr>
+        <tr>
+        <td><label for="card-number">Card Number <abbr title="required">*</abbr></label></td>
+        <td><input type="text" id="card-number" name="card-number" required pattern="\d{16}"></td>
+    </tr>
+    <tr>
+        <td><label for="expiration-date">Expiration Date<abbr title="required">*</abbr></label></td>
+        <td><input type="text" id="expiration-date" name="expiration-date" required pattern="\d{2}/\d{2}/\d{4}, \d{2}:\d{2}" value="dd/mm/yyyy, --:--"></td>
+    </tr>
+    </table>
+        <label>
+            Agree with terms and conditions <input type="checkbox" name="terms" required>
+        </label>
+        <br>
+        <button type="submit">Validate the payment</button>
+    </form>
+</body>
+</html>

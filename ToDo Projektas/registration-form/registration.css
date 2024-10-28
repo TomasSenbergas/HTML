@@ -1,0 +1,41 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: white;
+}
+
+.container, .success, .error {
+    text-align: center;
+}
+
+h1{
+    margin-bottom: 20px;
+    color: green;
+}
+
+.error h1{
+    border: 2px solid red;
+    padding: 15px;
+    margin-bottom: 20px;
+    color: red;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+    margin: 0 auto;
+}
+
+input, button {
+    margin: 10px 0;
+    padding: 10px;
+    border: 1px solid black;
+}
+
+button {
+    cursor: pointer;
+    
+}

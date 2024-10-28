@@ -1,0 +1,52 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: white;
+}
+
+.container {
+    text-align: center;
+    width: 800px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+input, button, select {
+    margin: 10px 0;
+    padding: 10px;
+    border: 1px solid black;
+}
+
+button {
+    cursor: pointer;
+}
+
+.hidden {
+    display: none;
+}
+
+.error h1{
+    
+    border: 2px solid red;
+    padding: 15px;
+    margin-bottom: 20px;
+    color: red;
+}
+
+table {
+    border-collapse: collapse;
+    text-align: center;
+}
+table, th, td {
+    border: 1px solid black;
+    padding: 5px;
+    text-align: justify;
+}
+table th {
+    padding-left: 8px;
+    padding-right: 8px;
+}

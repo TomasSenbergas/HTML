@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="">
+    </head>
+    <body>
+        <h1 id="action-movies-title" class="title">Action Movies</h1>
+        <ul id="action-movies-list" class="movie-list">
+            <li class="movie-item1">Die Hard</li>
+            <li class="movie-item">Terminator
+                <ul class="sub-movie-list">
+                    <li class="sub-movie-item1">Terminator 1</li>
+                    <li class="sub-movie-item2">Terminator 2</li>
+                </ul>
+            </li>
+            <li class="movie-item">Robocop</li>
+            <li class="movie-item">Mad Max</li>
+            <li class="movie-item">John Wick</li>
+        </ul>
+        <h1 id="comedies-title" class="title">Comedies</h1>
+        <ul id="comedies-list" class="movie-list">
+            <li class="movie-item1">Superbad</li>
+            <li class="movie-item2">Step Brothers</li>
+            <li class="movie-item3">Old School</li>
+            <li class="movie-item4">Wedding Crashers</li>
+            <li class="movie-item5">40 Year Old Virgin</li>
+        </ul>
+        <h2>Buttons</h2>
+        <button onclick=titleChange() id="change-title-id">Change Title by ID</button>
+        <button onclick=classChangeTextContext() id="change-title-class">Change Title by Class</button>
+        <button onclick=tagChange() id="change-first-heading">Change First Heading by Tag</button>
+        <button onclick=multipleClassChange() id="change-movie-item">Change Movie Item by Class</button>
+        <button onclick=multipleTagChange() id="change-first-list-item">Change First List Item by Tag</button>
+        <script src="selector.js" async defer></script>
+    </body>
+</html>

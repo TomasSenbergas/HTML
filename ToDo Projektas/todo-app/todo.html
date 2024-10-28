@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ToDo App</title>
+    <link rel="stylesheet" href="todo.css">
+</head>
+<body>
+    <div class="container">
+        <div>
+            <div id="userDetails"></div>
+            <button id="addButton">Add</button>
+            <button id="logoutButton">Logout</button>
+            <div id="addForm" class="hidden">
+                <select id="type" required>
+                    <option value="" disabled selected>Select Type</option>
+                    <option value="Task">Task</option>
+                    <option value="Reminder">Reminder</option>
+                    <option value="Note">Note</option>
+                  </select>
+                <input type="text" id="content" placeholder="Content" required>
+                <input type="date" id="endDate" required>
+                <button id="submitButton">Submit</button>
+                <button id="cancelButton">Cancel</button>
+            </div>
+            <div id="editForm" class="hidden">
+                <input type="text" id="editId" placeholder="ID" disabled>
+                <select id="editType" required>
+                    <option value="" disabled selected>Select Type</option>
+                    <option value="Task">Task</option>
+                    <option value="Reminder">Reminder</option>
+                    <option value="Note">Note</option>
+                  </select>
+                <input type="text" id="editContent" placeholder="Content" required>
+                <input type="date" id="editEndDate" required>
+                <button id="editSubmitButton">Submit</button>
+                <button id="editCancelButton">Cancel</button>
+            </div>
+        </div>
+        <br><br>
+        <div>
+            <table>
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Type</th>
+                        <th>Content</th>
+                        <th>Due Date</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody id="todoList"></tbody>
+            </table>
+        </div>
+    </div>
+    <script src="todo.js"></script>
+</body>
+</html>

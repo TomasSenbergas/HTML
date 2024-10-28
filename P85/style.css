@@ -1,0 +1,20 @@
+* {
+    box-sizing: border-box;
+  }
+  
+  form {
+    width: 400px;
+    margin: 50px auto;
+  }
+  
+  form input {
+    width: 100%;
+    padding: 10px;
+  }
+
+  /* 6. p elementui uždėti minimalų padding;*/
+  p{
+
+    padding: 10;
+  }
+  

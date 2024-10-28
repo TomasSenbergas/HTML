@@ -1,0 +1,39 @@
+.data-container {
+    margin: 20px;
+    padding: 50px;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+  }
+   
+  h1 {
+    font-family: 'Faster One', cursive;
+    font-size: 50px;
+    text-align: center;
+  }
+   
+  h4 {
+    font-family: 'Faster One', cursive;
+    font-size: 30px;
+  }
+  .squad-info {
+    margin-bottom: 20px;
+  }
+   
+  .homeTown-formed {
+    font-size: 20px;
+    margin-bottom: 5px;
+    text-align: center;
+    font-weight: bold;
+  }
+   
+  .members-container {
+    display: flex;
+    flex-wrap: wrap;          
+    justify-content: center;    
+    align-items: flex-start;  
+  }
+   
+  .member-item {
+    margin: 5px;      
+    padding: 5px;          
+  }

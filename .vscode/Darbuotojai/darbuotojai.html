@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="darbuotojai.css">
+    </head>
+    <body>
+        <h1>Darbuotojų sąrašas į CSV</h1>
+        <table id="darbuotojai">
+        <thead>
+            <tr>
+                <th>Vardas</th>
+                <th>Pavardė</th>
+                <th>Amžius</th>
+                <th>Pareigos</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td class="Vardas">Jonas</class=> </td>
+                <td class="Pavardė">Jonaitis</span> </td>
+                <td class="Amžius">30</span> </td>
+                <td class="Pareigos">Programuotojas</td>
+            </tr>
+            <tr>
+                <td class="Vardas">Asta</class=> </td>
+                <td class="Pavardė">Astaitė</span> </td>
+                <td class="Amžius">25</span> </td>
+                <td class="Pareigos">Projektų vadovė</td>
+            </tr>
+            <tr>
+                <td class="Vardas">Petras</class=> </td>
+                <td class="Pavardė">Petraitis</span> </td>
+                <td class="Amžius">35</span> </td>
+                <td class="Pareigos">Analitikas</td>
+            </tr>
+            <tr>
+                <td class="Vardas">Inga</class=> </td>
+                <td class="Pavardė">Ingaitytė</span> </td>
+                <td class="Amžius">28</span> </td>
+                <td class="Pareigos">Testuotoja</td>
+            </tr>
+        </tbody>
+    </table>
+    <br>
+    <label for="delimiterSelect">Pasirinkite skyriklį:</label>
+    <select id="delimiterSelect">
+        <option value=",">,</option>
+        <option value=";">;</option>
+    </select>
+    <button id="generateCSVButton">Generuoti CSV</button>
+        <script src="darbuotojai.js" async defer></script>
+    </body>
+</html>
