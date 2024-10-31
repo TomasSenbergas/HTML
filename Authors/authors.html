@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Author Management</title>
+    <style>
+        body {
+            display: flex;
+        }
+        .form-container {
+            flex: 1;
+        }
+        .author-list {
+            flex: 1;
+            margin-left: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="form-container">
+        <h1>Author Management</h1>
+
+        <div>
+            <h2>Get Author</h2>
+            <form id="getAuthorForm">
+                <input type="text" id="authorId" name="authorId" placeholder="Id" required><br><br>
+                <button type="button" onclick="getAuthor()">Get Author</button>
+            </form>
+        </div>
+
+        <div>
+            <h2>Add Author</h2>
+            <form id="addAuthorForm">
+                <input type="text" id="authorName" name="authorName" placeholder="Name"   required>
+                <input type="'text" id="authorSurname" name="authorSurname" placeholder="Surname" required><br><br>
+                <button type="button" onclick="addAuthor()">Add Author</button>
+            </form>
+        </div>
+
+        <div>
+            <h2>Update Author</h2>
+            <form id="updateAuthorForm">
+                <input type="text" id="updateAuthorId" name="updateAuthorId" placeholder="Id" required>
+                <input type="text" id="updateAuthorName" name="updateAuthorName" placeholder="Name" required>
+                <input type="'text" id="updateAuthorSurname" name="updateAuthorSurname" placeholder="Surname" required><br><br>
+                <button type="button" onclick="updateAuthor()">Update Author</button>
+            </form>
+        </div>
+
+        <div>
+            <h2>Delete Author</h2>
+            <form id="deleteAuthorForm">
+                <input type="text" id="deleteAuthorId" name="deleteAuthorId" placeholder="Id" required><br><br>
+                <button type="button" onclick="deleteAuthor()">Delete Author</button>
+            </form>
+        </div>
+    </div>
+
+    <div class="author-list">
+        <h2>Author List</h2>
+        <ul id="authorList"></ul>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
