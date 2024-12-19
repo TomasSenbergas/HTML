@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Human Data Viewer</title>
+    <link rel="stylesheet" href="human.css">
+</head>
+<body>
+    <button id="logout-button">Logout</button>
+    <h1>Human Data</h1>
+    <div id="userDetails"></div>
+    
+    <table id="human-data-table">
+        <thead>
+            <tr>
+                <th>Property</th>
+                <th>Value</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- Rows will be dynamically populated here -->
+        </tbody>
+    </table>
+    <br>
+    <h2>Address Data</h2>
+    <br>
+
+    <table id="address-data-table">
+        <thead>
+            <tr>
+                <th>Property</th>
+                <th>Value</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- Rows will be dynamically populated here -->
+        </tbody>
+    </table>
+    <div id="picture-container">
+        <img id="human-picture" alt="Human Picture" />
+        <button id="delete-picture-button">Delete Picture</button>
+        <input type="file" id="upload-picture-input" style="display: none;" />
+        <button id="upload-picture-button">Upload Picture</button>
+    </div>
+    <script src="human.js"></script>
+</body>
+</html>

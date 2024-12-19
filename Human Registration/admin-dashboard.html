@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard</title>
+    <link rel="stylesheet" href="login-form/login.css">
+</head>
+<body>
+    <div class="container">
+    <h2>Admin Dashboard</h2>
+    <br>
+    <button id="normalDataPage">Go to Human Data Page</button>
+    <button id="adminPage">Enter Admin Page</button>
+
+    <div id="adminSection" style="display: none;">
+        <h2>Delete User</h2>
+        <label for="userId">User ID (GUID):</label>
+        <input type="text" id="userId" name="userId" required>
+        <button id="deleteUser">Delete User</button>
+    </div>
+    </div>
+    <script>
+        document.getElementById('normalDataPage').addEventListener('click', function() {
+            window.location.href = 'human-app/human.html'; // Replace with actual normal data page URL
+        });
+
+        document.getElementById('adminPage').addEventListener('click', function() {
+            document.getElementById('adminSection').style.display = 'block';
+        });
+
+        document.getElementById('deleteUser').addEventListener('click', async function() {
+            const userId = document.getElementById('userId').value;
+            const token = sessionStorage.getItem('token');
+            if (userId) {
+                try {
+                    const response = await fetch(`https://localhost:50232/api/User/${userId}`, {
+                        method: 'DELETE',
+                        headers: {
+                            'accept': '/',
+                            'Authorization': `Bearer ${token}` // Assuming token is stored in sessionStorage
+                        }
+                    });
+                    if (response.ok) {
+                        alert(`User with ID ${userId} has been deleted.`);
+                    } else {
+                        alert('Failed to delete user. Please check the User ID and try again.');
+                    }
+                } catch (error) {
+                    alert('An error occurred while deleting the user.');
+                }
+            } else {
+                alert('Please provide a valid User ID.');
+            }
+        });
+
+        // Check if user is admin
+        if (sessionStorage.getItem('role') !== 'admin') {
+            alert('Access denied. Admins only.');
+            window.location.href = 'index.html';
+        }
+    </script>
+</body>
+</html>

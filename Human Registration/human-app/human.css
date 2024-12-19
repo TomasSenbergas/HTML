@@ -1,0 +1,103 @@
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: white;
+    margin: 0;
+    padding: 20px;
+    height: 100vh;
+    box-sizing: border-box;
+}
+
+h1, #userDetails {
+    margin: 10px 0;
+}
+
+.container {
+    text-align: center;
+    width: 800px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+label {
+    margin-top: 10px;
+}
+
+#logout-button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    padding: 10px 20px;
+    background-color: #635756;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    width: auto; /* Ensure the button does not take the whole width */
+}
+
+input, button, select {
+    margin: 5px 0;
+    padding: 10px;
+    border: 1px solid black;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+button {
+    cursor: pointer;
+}
+
+.error{
+    
+    border: 2px solid red;
+    padding: 15px;
+    margin-bottom: 20px;
+    color: red;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+th, td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+th {
+    background-color: #f4f4f4;
+}
+
+#picture-container {
+    position: relative;
+    top: 10px;
+    right: 10px;
+    text-align: center;
+}
+
+#human-picture {
+    max-width: 150px;
+    max-height: 150px;
+    display: block;
+    margin-bottom: 10px;
+}
+
+#delete-picture-button,
+#upload-picture-button {
+    display: block;
+    margin: 5px 0;
+}
+
+#logout-button:hover {
+    background-color: #d32f2f;
+}
