@@ -28,6 +28,7 @@ async function fetchHumanData() {
             sessionStorage.setItem('humanId', data.id); // Save humanId (GUID) to sessionStorage
             populateTable(data);
             fetchAddressData(); // Fetch address data if human data exists
+            fetchPicture(); // Fetch picture if human data exists
         } else {
             displayHumanDataForm(); // Display form if no human data
         }
